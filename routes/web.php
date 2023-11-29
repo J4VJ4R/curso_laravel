@@ -23,3 +23,11 @@ Route::get('/mostrar-fecha', function(){
         'titulo' => $titulo
     ));
 });
+
+Route::get('/pelicula/{titulo}', function($titulo){
+    return view('pelicula', array(
+        'titulo' => $titulo
+    ));
+});
+
+Route::get('/inicio', 'App\Http\Controllers\InicioController@Home');
